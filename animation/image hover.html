@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation</title>
+    <style>
+        .container-img{
+            position: relative;
+            width: 300px;
+        }
+        .image{
+            display: block;
+            width: 400px;
+            height: 400px;
+            transition: 1s;
+        }
+        .Overlay{
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            height: 400px;
+            width: 400px;
+            opacity: 0;
+            transition: 1s;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .container-img:hover .Overlay{
+            opacity: 1;
+        }
+
+        .container-img:hover .image{
+            transform: rotate(360deg);
+        }
+        .text{
+            color: white;
+            font-size: 20px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Overlay Effect</h2>
+    <div class="container-img">
+        <img src="C:\Users\student\Downloads\thumbbig-1311951.webp" class="image" alt="image">
+    <div class="Overlay">
+        <div class="text">Image Overlay effect</div>
+    </div>
+    </div>
+</body>
+</html>

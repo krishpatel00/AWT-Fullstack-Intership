@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin-bottom: 12px;    
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            text-align: center;
+            font-weight: bold;
+            transition: 3s;
+            float :left ;
+            display:flex ;
+            margin-right: 12px;
+        }
+
+        .translate:hover {
+            background-color: rgb(255, 145, 0);
+            transform: translate(10px, 10px);
+        }
+
+        .rotet:hover {
+            background-color: aqua;
+            transform: rotate(360deg);
+        }
+
+        .Rotate3D:hover {
+            background-color: aqua;
+            transform: rotatey(360deg);
+        }
+
+        .Skew:hover {
+            background-color: aqua;
+            transform: skew(10deg);
+        }
+
+        .scale:hover {
+            background-color: aqua;
+            transform: scale(0.7);
+        }
+
+        .opacity:hover {
+           
+            opacity: 0.5;
+        }
+
+        .rga:hover {
+            background-color: rebeccapurple
+        }
+
+        .boxshadow:hover {
+            box-shadow: 5px 10px;
+        }
+
+        .textshadow:hover {
+            text-shadow: 2px 2px #e5ff00;
+        }
+
+        .border:hover {
+            border: 22px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="translate">translate</div>
+   
+    <div class="rotet">rotate</div>
+   
+    <div class="Rotate3D">rotate 3D</div>
+    
+    <div class="Skew">Skew</div>
+  
+    <div class="scale">scale</div>
+   
+    <div class="opacity">opacity</div>
+    
+    <div class="rga">rgb</div>
+    
+    <div class="boxshadow">Box-shadow</div>
+   
+    <div class="textshadow">text-shadow</div>
+    
+    <div class="border">border-radius</div>
+    
+</body>
+
+</html>
