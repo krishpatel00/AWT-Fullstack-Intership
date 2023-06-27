@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".message").text("Namaste London");
+        
+        $("h1").css("background-color", "red");
+        
+        $("#btnlength").click(function(){
+            stringlen();
+        });
+
+        $("h1").click(function(){
+            // $("h1").text("Aee Vediya");
+            $("img").toggle();
+
+
+        });
+        $("h1").click(function(){
+            $("h").toggle();
+        });
+    });
+    </script>
+
+    <script type="text/javascript" src="./javascript.js"></script>
+        <style>
+            .message {
+            color: #b200ff;
+            font-size: 24px;
+            }
+            h1:hover{
+                cursor: pointer;
+            }
+        </style>
+</head>
+<body>
+    <span class="message"></span><br>
+    <h1 id="h" onclick="document.getElementById('img').src='./kk.tiff'; document.getElementById('h').innerText='Aee Vediya'">Hello ramani </h1>
+    <img id="img" alt=""><br>
+    <input type="text" id="name" /><br>
+    <button id="btnlength">Getting the length of name</button>
+</body>
+</html>

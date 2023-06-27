@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  a{
+    margin-left: 350px;
+    
+  }
+  .aa{
+  margin-left: 140px;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h3>Tooltip Example</h3>
+  <p>If you want to see the whole picture click here</p>
+  <a href="kk.jpg" data-toggle="tooltip" title="click here">click here</a>
+  </div>
+   <img class="aa"  src="kk.jpg" alt="" style="height: 200px;width: 200px;" data-toggle="tooltip" title="continental gt 650">
+   <img class="aa"  src="kk.jpg" alt="" style="height: 200px;width: 200px;" data-toggle="tooltip" title="continental gt 650">
+  <video src="https://youtu.be/9vIoTzOZMRA"></video>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+</body>
+</html>
