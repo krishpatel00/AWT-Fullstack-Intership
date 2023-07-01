@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type conversion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            background: url("https://source.unsplash.com/collection/190727/1600x900");
+            transition: 2px;
+        }
+        div{
+            border-radius: 400px;
+        }
+        .paras h2 {
+            text-align: center;
+        }
+
+        .paras h1 {
+            display: flex;
+            float: left;
+        }
+
+        .headd {
+            display: block;
+            right: 10px;
+            width: 500px;
+            position: fixed;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* css advance */
+        .btn11.btn11-border-3::after,
+        .btn11.btn11-border-3::before {
+            position: absolute;
+            content: "";
+            width: 0px;
+            height: 0;
+            transition: .5s;
+        }
+
+        .btn11.btn11-border-3::after {
+            top: -9px;
+            left: -9px;
+            border-top: 3px solid transparent;
+            border-left: 3px solid transparent;
+        }
+
+        .btn11.btn11-border-3::before {
+            bottom: -9px;
+            right: -9px;
+            border-bottom: 3px solid transparent;
+            border-right: 3px solid transparent;
+        }
+
+        .btn11.btn11-border-3:hover::after,
+        .btn11.btn11-border-3:hover::before {
+            width: 50%;
+            height: 300px;
+            border-color: #222222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headd">
+        <h1 id="headhover" class="alert alert-primary">Welcome Bro!</h1>
+    </div>
+    <!-- container start -->
+    <div class="paras container my-5">
+        <!-- num into String -->
+        <div class="alert alert-success btn11 btn11-border-3" onmouseenter="events('num into String')">
+            <h1>1.</h1>
+            <h2>num into String</h2>
+            <hr>11
+            <h4>CODE :</h4>
+            <p>
+                var num = 10;<br>
+                document.getElementById("ops").innerHTML = "type of num which is 10 is " + typeof num;<br>
+                var str = String(num);<br>
+                document.getElementById("op").innerHTML = "type of str which is num to string 10 is " + typeof str;<br>
+            </p>
+            <h4>OUTPUT : </h4>
+            <p id="op"></p>
+            <p id="ops"></p>
+        </div>
+        <!-- string to number -->
+        <div class="alert alert-danger btn11 btn11-border-3" onmouseenter="events('string to number')">
+            <h1>2.</h1>
+            <h2>string to number</h2>
+            <hr>
+            <h4>CODE :</h4>
+            <p>
+                let y = "5.5";<br>
+                document.getElementById("op1").innerHTML = "type of y which is string 5.5 is " + typeof y;<br>
+                let x = + y;<br>
+                document.getElementById("op2").innerHTML = "type of x which is string to number 5.5 is " + typeof x;<br>
+            </p>
+            <h4>OUTPUT:</h4>
+            <p id="op1"></p>
+            <p id="op2"></p>
+        </div>
+        <!-- number to String -->
+        <div class="alert alert-info btn11 btn11-border-3" onmouseenter="events('number to String')">
+            <h1>3.</h1>
+            <h2>number to String</h2>
+            <hr>
+            <h4>CODE :</h4>
+            <p>
+                const z = Number('3');<br>
+                document.getElementById("op3").innerHTML = "type of Z which is 3 is " + typeof z;<br>
+                var zts = String(z);<br>
+                document.getElementById("op4").innerHTML = "type of zts which is num 3 to string 3 is " + typeof
+                zts;<br>
+            </p>
+            <h4>OUTPUT:</h4>
+            <p id="op3"></p>
+            <p id="op4"></p>
+        </div>
+        <!-- toString() method converts a number to a string -->
+        <div class="alert alert-warning btn11 btn11-border-3" onmouseenter="events('toString() method converts a number to a string')">
+            <h1>4.</h1>
+            <h2>toString() method converts a number to a string</h2>
+            <hr>
+            <h4>CODE :</h4>
+            <p>
+                let x1 = 123;<br>
+                document.getElementById("op5").innerHTML =
+                x1.toString() + "<br>" +
+                (123).toString() + "<br>" +
+                (100 + 23).toString();
+            </p>
+            <h4>OUTPUT :</h4>
+            <p id="op5"></p>
+        </div>
+        <!-- date to Number -->
+        <div class="alert alert-dark btn11 btn11-border-3" onmouseenter="events('date to Number')">
+            <h1>5.</h1>
+            <h2>date to Number</h2>
+            <hr>
+            <h4>CODE :</h4>
+            <p>
+                dt = new Date();<br>
+                document.getElementById("op6").innerHTML = dt;<br>
+                dtn = Number(dt);<br>
+                document.getElementById("op7").innerHTML = dtn;<br>
+            </p>
+            <h4>OUTPUT :</h4>
+            <p id="op6"></p>
+            <p id="op7"></p>
+        </div>
+        <!-- container end -->
+    </div>
+    <script>
+        // num into String
+        var num = 10;
+        document.getElementById("ops").innerHTML = "type of num which is 10 is  " + typeof num;
+        var str = String(num);
+        document.getElementById("op").innerHTML = "type of str which is num to string 10 is  " + typeof str;
+        // string to number
+        let y = "5.5";
+        document.getElementById("op1").innerHTML = "type of y which is string 5.5 is " + typeof y;
+        let x = + y;
+        document.getElementById("op2").innerHTML = "type of x which is string to number 5.5 is " + typeof x;
+        // number to String
+        const z = Number('3');
+        document.getElementById("op3").innerHTML = "type of Z which is 3 is " + typeof z;
+        var zts = String(z);
+        document.getElementById("op4").innerHTML = "type of zts which is num 3 to string 3 is " + typeof zts;
+        // toString() method converts a number to a string
+        let x1 = 123;
+        document.getElementById("op5").innerHTML =
+            x1.toString() + "<br>" +
+            (123).toString() + "<br>" +
+            (100 + 23).toString();
+        // date to Number
+        dt = new Date();
+        document.getElementById("op6").innerHTML = dt;
+        dtn = Number(dt);
+        document.getElementById("op7").innerHTML = dtn;
+        // event listener
+        function events(value) {
+            // alert("You are Hovering "+ value);
+            // console.log("hello");
+            document.getElementById("headhover").innerHTML = value;
+        }
+    </script>
+</body>
+
+</html>
