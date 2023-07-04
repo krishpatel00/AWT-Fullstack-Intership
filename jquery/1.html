@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 2px;
+        }
+        
+        #box2 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 2px;
+            color: brown;
+            text-align: center;
+        }
+        
+        #box3 {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia possimus voluptates voluptate ad quod ab dolore nisi esse nam quibusdam sint eligendi, nostrum nemo? Maiores esse quidem neque beatae fuga officiis voluptate corrupti ab, ducimus
+        hic, expedita distinctio, facere mollitia sint! Odio, id?
+    </p>
+    <button id="btn">click me</button> -->
+    <div id="box">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+    </div>
+    <button id="ty">click here</button>
+
+
+
+
+</body>
+<script>
+    // $("#btn").click(function() {
+    //         $("p").toggle();
+
+
+    //     })
+    // $(Document).ready(function() {
+    //     $("#btn").hover(
+    //         function() {
+    //             alert("you have a para");
+
+    //         },
+    //         $("P").hover(
+    //             function() {
+    //                 alert("hello");
+
+    //             }
+    //         )
+    //     )
+
+    // })
+    // $("#ty").click(function() {
+    //     $("#box").fadeOut();
+    // })
+    $("#box1").click(function() {
+        $(this).animate({
+            width: '1000px',
+            opacity: '0.5',
+
+        }, 10000);
+
+    })
+    $(ty).click(function() {
+        $("#box1").stop();
+
+    })
+</script>
+
+</html>

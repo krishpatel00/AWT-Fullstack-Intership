@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Day 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        #pe {
+            height: 200px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: yellow;
+        }
+        
+        .apply {
+            color: red;
+            border: 2px solid black;
+            background: gray;
+        }
+    </style>
+</head>
+
+<body id="test">
+    <p id="testH">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium officia, omnis quas facere fugiat explicabo sed? Molestias eveniet rerum eius repellat.
+    </p>
+    <hr>
+    <p id="test1">Tej</p>
+    <p id="test2">Savasiya</p>
+    <p><input type="text" name="" id="test3" value="Old Value"></p>
+    <button id="btn1">Text</button>
+    <button id="btn2">HTML</button>
+    <button id="btn3">Value</button>
+    <button id="btn4">appand text</button>
+    <hr>
+    <div>
+        <p id="pe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tempora cupiditate. Commodi laborum quos non vel? Voluptatibus, consectetur, alias autem, ad animi eveniet ipsum facilis delectus ratione quia voluptas mollitia.</p>
+
+        <button id="remove">remove</button>
+        <button id="empty">empty</button>
+    </div>
+    <hr>
+    <div class="con">
+        <h1 id="ih1">hello</h1>
+        <p id="ip1">heelo p</p>
+        <button id="classapply">Click me to apply css on h1 and p</button>
+        <button id="classremove">Click me to remove css on h1 and p</button>
+        <button id="toggleclass">Click me to toggle css on h1 and p</button>
+    </div>
+</body>
+<script>
+    // print tag or text containt
+    // $("#test").click(function() {
+    //         alert($("#test").text())
+    //             // alert($("#test").html())
+    //     })
+    // set text , html , value
+    $("#btn1").click(function() {
+        $("#test1").text("Hello Tejas");
+
+    });
+    $("#btn2").click(function() {
+        $("#test2").html("<i>Hello Tejas</i>");
+    });
+    $("#btn3").click(function() {
+        $("#test3").val("hyy tejas");
+
+    });
+    //append
+    $("#btn4").click(function() {
+        $("#testH").append($("#testH").text());
+        // $("p").prepend("Some prepended text.");
+    });
+    $("#remove").click(function() {
+        $("#pe").remove();
+    });
+    $("#empty").click(function() {
+        $("#pe").empty();
+    });
+    // add class
+    $("#classapply").click(function() {
+        $("#ih1,#ip1").addClass("apply");
+    });
+    $("#classremove").click(function() {
+        $("#ih1,#ip1").removeClass("apply");
+    });
+    $("#toggleclass").click(function() {
+        $("#ih1,#ip1").toggleClass("apply");
+    });
+</script>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Day 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 100%;
+            display: flex;
+            float: right;
+        }
+        
+        .box div {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 15px;
+        }
+        
+        .box1 {
+            background-color: red;
+        }
+        
+        .box2 {
+            background-color: green;
+        }
+        
+        .box3 {
+            background-color: blue;
+        }
+        
+        .box4 {
+            background-color: purple;
+        }
+        
+        #animebox {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, illo.</p>
+    <button id="btn">click</button>
+    <hr>
+    <p id="pr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est aliquid eius consequuntur sunt labore cum veritatis consectetur voluptate molestias quasi. Accusamus non, id quae aliquid quam est? Asperiores molestias ipsum rerum laboriosam! Numquam,
+        asperiores!
+    </p>
+    <hr>
+    <div class="sec">
+        <p id="secp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, expedita? Nulla nam harum, excepturi voluptatum facere voluptatibus. Sunt harum dolorem libero in officiis quo debitis, illo nihil eligendi ab illum repudiandae neque autem nesciunt!</p>
+        <button id="hide">For Hide</button>
+        <button id="show">For Show</button>
+    </div>
+    <hr>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <button id="boxbtn">Click Me</button>
+    </div>
+    <hr>
+    <div class="sides">
+        <h1 id="sld1">Click me for silde up</h1>
+        <p id="sideT1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi culpa rem, expedita, voluptates non voluptatibus beatae unde laboriosam et minus aperiam dolores, voluptatem molestiae nulla possimus. Aliquam error, vitae sunt, suscipit nam vero,
+            quidem laudantium deserunt eligendi amet harum. Libero voluptates illum alias odio.</p>
+        <h1 id="sld2">Click me for silde down</h1>
+        <p id="sideT2" style="display: none;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi culpa rem, expedita, voluptates non voluptatibus beatae unde laboriosam et minus aperiam dolores, voluptatem molestiae nulla possimus. Aliquam error, vitae sunt, suscipit nam vero,
+            quidem laudantium deserunt eligendi amet harum. Libero voluptates illum alias odio.</p>
+        <h1 id="sld3">Click me for silde toggle</h1>
+        <p id="sideT3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi culpa rem, expedita, voluptates non voluptatibus beatae unde laboriosam et minus aperiam dolores, voluptatem molestiae nulla possimus. Aliquam error, vitae sunt, suscipit nam vero,
+            quidem laudantium deserunt eligendi amet harum. Libero voluptates illum alias odio.</p>
+    </div>
+    <hr>
+    <div id="anime">
+        <button id="stop">Stop</button>
+        <div id="animebox">
+
+        </div>
+    </div>
+    <hr>
+    <div class="chain">
+        <button id="chain1">
+            run
+        </button>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem mollitia earum quam aperiam reiciendis eligendi sed laudantium nam, libero odit eum asperiores qui quas! Omnis quos quis ipsa animi asperiores repellendus fugiat non excepturi
+            perspiciatis earum. Expedita consequatur fugit minus non unde beatae optio architecto dicta repudiandae animi? Tempore provident expedita dolorum ratione itaque!</p>
+    </div>
+</body>
+<script>
+    // paragraph toggle using button 
+    $("#btn").click(function() {
+        $("p").toggle();
+    })
+
+    // on button hover alert apeears
+    // $(document).ready(function() {
+    //     $("#pr").hover(
+    //         function() {
+    //             alert("You Are Hovering para");
+    //         },
+    //         function() {
+    //             alert("heello");
+    //         }
+    //     );
+    // });
+
+    // two buttons to hide / show
+    $("#hide").click(function() {
+        $("#secp").hide(1000);
+    });
+    $("#show").click(function() {
+        $("#secp").show(1000);
+    });
+
+    // fade functions
+    $("#boxbtn").click(function() {
+        $(".box1").fadeIn(2000); // seconds , slow , fast
+        $(".box2").fadeOut(3000); // seconds , slow , fast 
+        $(".box3").fadeToggle(1000); // seconds , slow , fast
+        $(".box4").fadeTo("slow", 0.5); // seconds , slow , fast , opacity
+    })
+
+    // sildes on click
+    $("#sld1").click(function() {
+        $("#sideT1").slideUp();
+    });
+    $("#sld2").click(function() {
+        $("#sideT2").slideDown();
+    });
+    $("#sld3").click(function() {
+        $("#sideT3").slideToggle();
+    });
+
+    //animtion using juery
+    $("#animebox").click(function() {
+        $(this).animate({
+            width: '1000px',
+            opacity: '0.4'
+        }, "slow")
+        $(this).animate({
+            height: '1000px',
+            opacity: '0.8'
+        }, "slow")
+        $(this).animate({
+            width: '100px',
+            opacity: '0.4'
+        }, "slow")
+        $(this).animate({
+            height: '100px',
+            opacity: '0.8'
+        }, "slow")
+    })
+
+    // stop btn
+    $("#stop").click(function() {
+        $("#animebox").stop();
+    });
+
+    //chaining 
+    $("#chain1").click(function() {
+        $("#p1").css("color", "red").css("font-size", "30pxx").slideUp(2000).slideDown(2000);
+    });
+</script>
+
+</html>
